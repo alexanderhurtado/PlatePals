@@ -39,8 +39,8 @@ INSERT INTO restaurants VALUES
 (1, ‘Taphouse 41’, 4.5, ‘Burgers’, 2,  
 https://s3-media0.fl.yelpcdn.com/bphoto/5DvWkQv1LV4jxs_t3yXzvg/348s.jpg’, ‘https://www.taphouse41.com’), 
 
-(2, ‘Josiahs Coffeehouse and Cafe’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg’, ‘https://josiahscoffee.com’), 
+(2, ‘Grille 26’, 4.0, ‘American(traditional)’, 2,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/3oGkpYjrpNmrIcx0HCF26A/o.jpg’, ‘https://www.grille26.com/’), 
 
 (3, ‘Philips Avenue Diner’, 4.0, ‘Diner’, 2,  
 ‘https://s3-media0.fl.yelpcdn.com/bphoto/pBJ4cbpqhsYvC1w6x6P7Zw/o.jpg’, ‘https://www.phillipsavenuediner.com’),
