@@ -66,32 +66,32 @@ https://s3-media0.fl.yelpcdn.com/bphoto/5DvWkQv1LV4jxs_t3yXzvg/348s.jpg’, ‘h
 (10, ‘Sickies Garage Burgers & Brews’, 3.5, ‘Burgers and Bars’, 2,  
 ‘https://s3-media0.fl.yelpcdn.com/bphoto/0F_UIH-4lTVSPd9deF7aiA/o.jpg’, ‘https://sickiesburgers.com/’),
 
-/**(11, ‘Josiahs Coffeehouse and Cafe’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg’, ‘https://josiahscoffee.com/’),
+(11, ‘The Blarney Stone Pub’, 4.5, ‘Beer Bar’, 2,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/cUydjVMwMLg5v7HtmR-2BQ/o.jpg’, ‘https://www.blarneyirishpub.com/’),
 
-(12, ‘Josiahs Coffeehouse and Cafe’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg’, ‘https://josiahscoffee.com/’),
+(12, ‘Carnaval Brazilian Grill’, 4.5, ‘Brazilian’, 3,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/DbDLkY7N84N8-qhUwif60w/o.jpg’, ‘https://www.cbgsd.com/’),
 
-(13, ‘Josiahs Coffeehouse and Cafe’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg’, ‘https://josiahscoffee.com/’),
+(13, ‘Phnom Penh Restaurant Asian Cuisine’, 4.5, ‘Breakfast and Brunch’, 2,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/3RV7g6Vt4kPLAxUvYpmJkQ/o.jpg’, ‘https://josiahscoffee.com/’),
 
-(14, ‘Josiahs Coffeehouse and Cafe’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg’, ‘https://josiahscoffee.com/’),
+(14, ‘Sanaas Gourmet Resturant’, 4.5, ‘Breakfast and Brunch’, 2,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/J28bHXYazKk6sj6NvRet9Q/o.jpg’, ‘https://www.sanaacooks.com/’),
 
-(15, ‘Josiahs Coffeehouse and Cafe’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg’, ‘https://josiahscoffee.com/’),
+(15, ‘The Original Pancake House’, 4.5, ‘Coffee & Tea’, 2,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/ioufnYmjOG9PB8X-nEa2aA/o.jpg’, ‘https://originalpancakehousesiouxfalls.com/’),
 
-(16, ‘Josiahs Coffeehouse and Cafe’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg’, ‘https://josiahscoffee.com/’),
+(16, Ode to Food and Drinks’, 4.5, ‘Breakfast and Brunch’, 2,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/QPyjWTQW-g5SnYH_Ti9QDQ/o.jpg’, ‘https://www.odetofoodanddrinks.com/’),
 
-(17, ‘Josiahs Coffeehouse and Cafe’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg’, ‘https://josiahscoffee.com/’),
+(17, ‘ROAM Kitchen + Bar’, 4.0, ‘Breakfast and Brunch’, 3,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/WsQGxYBSUxbuNLX0aESQgg/o.jpg’, ‘https://www.roamkitchen.com/’),
 
-(18, ‘Josiahs Coffeehouse and Cafe’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg’, ‘https://josiahscoffee.com/’),
+(18, ‘Monks Ale House’, 4.5, ‘Breweries’, 2,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/hoMBshGLH0O1xolvbyguIw/o.jpg’, ‘https://monks-sf.com/’),
 
-(19, ‘Josiahs Coffeehouse and Cafe’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg’, ‘https://josiahscoffee.com/’),
+(19, ‘Morries Steakhouse’, 4.5, ‘Steakhouse’, 2,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/2yiXB819aiF5aa8PctaruA/o.jpg’, ‘https://www.morriessteakhouse.com/’),
 
-(20, ‘Josiahs Coffeehouse and Cafe’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg’, ‘https://josiahscoffee.com/’); **/
+(20, ‘Lams Vietnamese Restaurant’, 4.0, ‘Vietnamese’, 2,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/CvVZEn7xFzbr0nMdiGtMsQ/o.jpg’, ‘’);
