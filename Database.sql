@@ -66,14 +66,14 @@ https://s3-media0.fl.yelpcdn.com/bphoto/5DvWkQv1LV4jxs_t3yXzvg/348s.jpg’, ‘h
 (10, ‘Sickies Garage Burgers & Brews’, 3.5, ‘Burgers and Bars’, 2,  
 ‘https://s3-media0.fl.yelpcdn.com/bphoto/0F_UIH-4lTVSPd9deF7aiA/o.jpg’, ‘https://sickiesburgers.com/’),
 
-(11, ‘The Blarney Stone Pub’, 4.5, ‘Beer Bar’, 2,  
+(11, ‘Pizza Cheeks’, 4.5, ‘Italian, Pizza’, 2,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/fQL-3CCrDTonUMXQ0uUl5A/o.jpg’, ‘https://www.mypizzacheeks.com’),
+
+(12, ‘The Blarney Stone Pub’, 4.5, ‘Beer Bar’, 2,  
 ‘https://s3-media0.fl.yelpcdn.com/bphoto/cUydjVMwMLg5v7HtmR-2BQ/o.jpg’, ‘https://www.blarneyirishpub.com/’),
 
-(12, ‘Carnaval Brazilian Grill’, 4.5, ‘Brazilian’, 3,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/DbDLkY7N84N8-qhUwif60w/o.jpg’, ‘https://www.cbgsd.com/’),
-
-(13, ‘Phnom Penh Restaurant Asian Cuisine’, 4.5, ‘Breakfast and Brunch’, 2,  
-‘https://s3-media0.fl.yelpcdn.com/bphoto/3RV7g6Vt4kPLAxUvYpmJkQ/o.jpg’, ‘https://josiahscoffee.com/’),
+(13, ‘Shahi Indian Grill’, 4.5, ‘Idian, Beer Bar’, 2,  
+‘https://s3-media0.fl.yelpcdn.com/bphoto/yB_XxhlyNW_t8tfpiTJ0Gg/o.jpg’, ‘https://www.shahiindiagrill.com’),
 
 (14, ‘Sanaas Gourmet Resturant’, 4.5, ‘Breakfast and Brunch’, 2,  
 ‘https://s3-media0.fl.yelpcdn.com/bphoto/J28bHXYazKk6sj6NvRet9Q/o.jpg’, ‘https://www.sanaacooks.com/’),

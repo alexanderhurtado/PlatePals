@@ -33,7 +33,7 @@ class Restaurant {
     }
 
     public function getCategory() {
-        return $this->Category;
+        return $this->category;
     }
     public function setCategory($value) {
         $this->category = $value;
