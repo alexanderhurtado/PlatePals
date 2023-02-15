@@ -35,3 +35,17 @@ body {
     border: 1px solid black;
 	border-radius: 0px 0px 15px 15px;
 }
+#left_column {
+    float: left;
+    width: 250px;
+    text-align: center;
+}
+#right_column {
+    float: left;
+    padding-left: 1em;
+    padding-bottom: 2em;
+}
+img{
+    width:100%;
+    max-width:200px;
+}
