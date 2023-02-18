@@ -64,5 +64,34 @@ class Restaurant {
         $imageAlt = 'Image: ' . $this->getName();
         return $imageAlt;
     }
+	
+	public function getStarRating(){
+	
+		$starRating = $this->rating;
+		
+		$output = '';
+
+		$full_stars = floor($starRating);
+		$half_star = ceil($starRating - $full_stars);
+		//Should be 1 for every odd number.     
+		$empty_stars = 5 - $full_stars - $half_star;
+
+		for($i = 0; $i < $full_stars; $i++){
+			//Adds all of the full stars
+			$output .= '<span class="fa fa-star"></span>';
+		}
+
+		if($half_star > 0){
+			//Add half star         
+			$output .= '<span class="fa fa-star-half-o checked"></span>';
+		}
+
+		for($i = 0; $i < $empty_stars; $i++){
+			//Fill any remainder with empty stars.
+			$output .= '<span class="fa fa-star-o"></span>';
+		}
+		return $output;
+		
+	}
 }
 ?>

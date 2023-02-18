@@ -19,9 +19,9 @@ class RestaurantDB {
 			$restaurant->setPriceTier($row['price_tier']);
 			$restaurant->setSiteURL($row['site_url']);
             $restaurant->setPhotoURL($row['photo_url']);
-            $trainers[] = $trainer;
+            $restaurants[] = $restaurant;
         }
-        return $trainers;
+        return $restaurants;
     }
 	
 	//Function for calling a single restaurant from the database
