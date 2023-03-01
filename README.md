@@ -29,7 +29,7 @@ To Do:
 	-Tall images break layout
 	-Better layout? (card format?)
 	-Animations
-
+ 
 6. Matches Page
 	-More interesting layout. Images? Links?
 
