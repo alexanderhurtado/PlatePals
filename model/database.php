@@ -1,8 +1,12 @@
 <?php
 class Database {
-    private static $dsn = 'mysql:host=localhost;dbname=dining_app';
+    //just uncomment the following line (4), then comment out the other line(5).
+    //private static $dsn = 'mysql:host=localhost;dbname=dining_app';
+    private static $dsn = 'mysql:host=localhost;dbname=platepals';
     private static $username = 'root';
-    private static $password = 'sesame';
+    //just uncomment the following line (8) then comment out the other line(9).
+    //private static $password = 'sesame';
+    private static $password = 'Armondo1@';
     private static $db;
 
     private function __construct() {}
