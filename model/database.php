@@ -2,7 +2,7 @@
 class Database {
     private static $dsn = 'mysql:host=localhost;dbname=dining_app';
     private static $username = 'root';
-    private static $password = 'sesame';
+    private static $password = 'sesame@';
     private static $db;
 
     private function __construct() {}
