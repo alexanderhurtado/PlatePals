@@ -25,12 +25,14 @@ To Do:
 5. Restaurant Page
 	-More interesting YES/NO buttons
 	-Shorten Website links
+	-include error if active list is empty
 	-More dynamic categories?
 	-Tall images break layout
 	-Better layout? (card format?)
 	-Animations
  
 6. Matches Page
+	-Include error if matches list is empty
 	-More interesting layout. Images? Links?
 
 7. Header
