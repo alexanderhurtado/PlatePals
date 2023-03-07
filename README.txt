@@ -3,8 +3,7 @@ A website application to help others decide on a place to eat 🍕 🍔 🌮 �
 
 To Do:
 
-1. Default page/Profile page
-	-Create profile page
+1. Dashboard Page
 	-Send to Sign in page if not signed in
 	-Should include:
 		a. User information
@@ -15,27 +14,30 @@ To Do:
 	-Add instructions? Graphics?
 
 3. Sign in page
-	-Add information/instructions
-	-Implement functionality
+	-Add information/instructions?
+	-Username/Password requirements
 
 4. Database
 	-Needs cleaning up (Misspellings, inaccurate categories, sideways images)
+	-Split up UserDB functions to RestaurantDB file
 	-More restaurants?
 
 5. Restaurant Page
 	-More interesting YES/NO buttons
 	-Shorten Website links
-	-include error if active list is empty
 	-More dynamic categories?
 	-Tall images break layout
 	-Better layout? (card format?)
 	-Animations
- 
+
 6. Matches Page
-	-Include error if matches list is empty
 	-More interesting layout. Images? Links?
 
 7. Header
 	-Highlight active page
 	-Rename/Rework tabs
-	-Dynamic sign-in/account tab
+	
+8. General
+	-Implement partner system
+	-Clean up unnecessary code
+	-Redo color design?
