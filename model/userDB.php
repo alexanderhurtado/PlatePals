@@ -87,5 +87,49 @@ class UserDB {
         $statement->closeCursor();		
 	}
 	
+	//Function for registering user to database
+	public function addUser($un, $pw, $jd) {
+		$db = Database::getDB();
+		$query = 'INSERT INTO users (username, password, trn_date)
+				  VALUES (:username, :password, :join_date)';
+		$statement = $db->prepare($query);
+        $statement->bindValue(':username', $un);
+        $statement->bindValue(':password', md5($pw));
+        $statement->bindValue(':join_date', $jd);
+        if ($statement->execute()) {
+			return true;
+		} else {
+			return false;
+		}
+        $statement->closeCursor();
+	}
+	
+	//Function for selecting user from database
+	public function getUser($un, $pw) {
+		$db = Database::getDB();
+		$query = 'SELECT * FROM users 
+		          WHERE username = :username and password = :password';
+		$statement = $db->prepare($query);
+        $statement->bindValue(':username', $un);
+        $statement->bindValue(':password', md5($pw));
+        $statement->execute();
+        $row = $statement->rowCount();
+        $statement->closeCursor();    
+		return $row;
+	}
+	
+	//Function for checking user from database
+	public function checkUser($un) {
+		$db = Database::getDB();
+		$query = 'SELECT * FROM users 
+		          WHERE username = :username';
+		$statement = $db->prepare($query);
+        $statement->bindValue(':username', $un);
+        $statement->execute();
+        $row = $statement->rowCount();
+        $statement->closeCursor();    
+		return $row;
+	}
+	
 }
 ?>

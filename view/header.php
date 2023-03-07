@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html>
 <head>
     <title>PlatePals Restaurant Finder</title>
@@ -12,6 +15,14 @@
 		<li><a href="/PlatePals/restaurant">Start</a></li>
 		<li><a href="/PlatePals/matches">Your Matches</a></li>
 		<li><a href="/PlatePals/about">About</a></li>
-		<li class="float"><a href="/PlatePals/account">Sign in</a></li>
+		<li class="float"> <?php
+			if (!isset($_SESSION["username"])) { ?>
+				<a href="/PlatePals/user/login">Sign In</a>
+			<?php } else { ?>
+				<a href="/PlatePals/dashboard">
+					<?php echo $_SESSION["username"] ?>
+				</a>
+			<?php } ?>
+		</li>
 	</ul>
 </nav>
