@@ -10,6 +10,16 @@
 	$restaurants = $userDB->getFavorites();
 	
 	//Add if/else statement to include error page if favorites is empty
-	
+  public static function getName () {
+    if (!isset(self::$db)) {
+        try {
+            $restaurant->getName();
+        } catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            include('../errors/matches_error.php');
+            exit();
+        }
+    }
+  
 	include('matches_view.php');
 ?>
