@@ -4,7 +4,6 @@ A website application to help others decide on a place to eat 🍕 🍔 🌮 �
 To Do:
 
 1. Dashboard Page
-	-Send to Sign in page if not signed in
 	-Should include:
 		a. User information
 		b. User Link information/page
