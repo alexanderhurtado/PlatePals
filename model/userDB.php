@@ -1,11 +1,12 @@
 <?php
 class UserDB {
 	
-	//Function for adding liked restaurant to favorites list
-    public function addFavorite($restaurantID) {
+	//Function for adding a restaurant to favorites list
+    public function addFavorite($un, $restaurantID) {
         $db = Database::getDB();
-        $query = 'INSERT INTO favorites
-				  VALUES(:restaurant_id)';
+        $query = 'UPDATE user_' . $un . '
+		          SET isFavorite = 1
+				  WHERE restaurantID = :restaurant_id';
         $statement = $db->prepare($query);
         $statement->bindValue(':restaurant_id', $restaurantID);
         $statement->execute();
@@ -17,10 +18,11 @@ class UserDB {
 	
 	
 	//Function for calling only favorite restaurants from the database
-    public function getFavorites() {
+    public function getFavorites($un) {
         $db = Database::getDB();
-        $query = 'SELECT * FROM restaurants r JOIN favorites f
-				  ON r.restaurantID = f.restaurantID
+        $query = 'SELECT * FROM restaurants r JOIN user_' . $un . ' a
+				  ON r.restaurantID = a.restaurantID
+				  WHERE isFavorite = 1
                   ORDER BY r.name';
         $statement = $db->prepare($query);
         $statement->execute();
@@ -41,10 +43,11 @@ class UserDB {
     }
 	
 	//Function for calling only active restaurants from the database
-    public function getActive() {
+    public function getActive($un) {
         $db = Database::getDB();
-        $query = 'SELECT * FROM restaurants r JOIN active a
-				  ON r.restaurantID = a.restaurantID';
+        $query = 'SELECT * FROM restaurants r JOIN user_' . $un . ' a
+				  ON r.restaurantID = a.restaurantID
+				  WHERE isActive = 1';
         $statement = $db->prepare($query);
         $statement->execute();
         
@@ -65,9 +68,10 @@ class UserDB {
     }
 	
 	//Function for removing restaurants from active list
-    public function deleteActive($restaurantID) {
+    public function deleteActive($un, $restaurantID) {
         $db = Database::getDB();
-        $query = 'DELETE FROM active
+        $query = 'UPDATE user_' . $un . '
+		          SET isActive = 0
 				  WHERE restaurantID = :restaurant_id';
         $statement = $db->prepare($query);
         $statement->bindValue(':restaurant_id', $restaurantID);
@@ -76,12 +80,10 @@ class UserDB {
     }
 	
 	//Function for rebuilding actives and deleting favorites
-	public function resetFavorites() {
+	public function resetFavorites($un) {
 		$db = Database::getDB();
-		$query = 'DELETE FROM favorites;
-				  DELETE FROM active;
-				  INSERT INTO active
-					SELECT restaurantID FROM restaurants';
+		$query =  'UPDATE user_' . $un . '
+		           SET isActive = 1, isFavorite = 0';
         $statement = $db->prepare($query);
         $statement->execute();
         $statement->closeCursor();		
@@ -129,6 +131,22 @@ class UserDB {
         $row = $statement->rowCount();
         $statement->closeCursor();    
 		return $row;
+	}
+	
+	//Function for creating user restaurant list table
+	public function createList($un) {
+		$db = Database::getDB();
+		$query = 'CREATE TABLE IF NOT EXISTS user_' . $un . ' (
+					`restaurantID` int(11) NOT NULL,
+					`isActive` BIT(1) NOT NULL,
+					`isFavorite` BIT(1) NOT NULL,
+					PRIMARY KEY (`restaurantID`));
+				INSERT INTO user_' . $un . ' (`restaurantID`, `isActive`, `isFavorite`)
+				SELECT restaurantID, 1, 0
+				FROM restaurants;';
+		$statement = $db->prepare($query);
+        $statement->execute();
+        $statement->closeCursor();
 	}
 	
 }
