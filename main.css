@@ -26,6 +26,10 @@ html {
     background-color: #0f1620;
 	border-radius: 0px 0px 10px 10px;
 }
+.navbar ul a:active {
+    color: #0f1620;
+    background-color: #f6f6f6;
+}
 body {
     font-family: Verdana, Helvetica, Arial, sans-serif;
     width: 760px;
