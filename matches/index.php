@@ -12,7 +12,11 @@
 		$user = $_SESSION["username"];
 		$restaurants = $userDB->getFavorites($user);
 	}
-	
+  
+  if($restaurant = null){
+    $error_message = $e->getMessage();
+    include('matches_error.php');
+    exit();
+  }
 	include('matches_view.php');
-	
 ?>

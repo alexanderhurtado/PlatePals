@@ -16,7 +16,8 @@ if (!isset($_SESSION["username"])) {
 	if(isset($_POST['reset'])) {
 		$userDB->resetFavorites($user);
 		header("Refresh:0");
-	} ?>
+	}  
+  ?>
 	<main>
 		<section>
 			<h1>Your Matches</h1>
@@ -24,10 +25,8 @@ if (!isset($_SESSION["username"])) {
 				<ul class="column-list-3">
 					<?php foreach ($restaurants as $restaurant) : ?>
 						<li>
-						
 							<!-- Add links or something to make the page more interesting? -->
-							<?php echo $restaurant->getName(); ?>
-							
+							<?php echo $restaurant->getName(); ?>	
 						</li>
 					<?php endforeach; ?>
 				</ul>
