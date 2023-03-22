@@ -39,8 +39,13 @@ if (isset($_REQUEST['username'])){
 		<form name="registration" action="" method="post">
 			<input type="text" name="username" placeholder="Username" required autofocus /><br>
 			<input type="password" name="password" placeholder="Password" required /><br>
-			<input type="submit" name="submit" value="Register" />
+			<input type="submit" name="submit" value="Register" /> 
 		</form><br>
+		<h4>Registration Requirements</h4>
+		<form name="registrationrequirements" action="" method="post">
+			<p> Password must be in between 1 and 10 characters. </p>
+			<p> Password myst not contain special characters, such as !@#$%&*()_+.</p>
+			<p> Username must be unique.</p>
 	</div>
 <?php }
 include '../view/footer.php'; ?>

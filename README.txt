@@ -14,6 +14,8 @@ To Do:
 
 3. Sign in page
 	-Add information/instructions?
+		-I've listed some instructions for registering users but still learning how to prevent them from
+		 inputting it into the system.
 	-Username/Password requirements
 
 4. Database

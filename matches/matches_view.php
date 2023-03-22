@@ -1,9 +1,13 @@
-<?php include '../view/header.php'; 
+<?php include '../view/header.php';
 
 if (isset($_SESSION["username"])) {
 	$user = $_SESSION["username"];
 } else { 
 	$user = '';
+}
+
+if (empty($restaurant)) {
+	include '../errors/matches_error.php';
 }
 
 if (!isset($_SESSION["username"])) {
