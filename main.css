@@ -26,7 +26,7 @@ html {
     background-color: #0f1620;
 	border-radius: 0px 0px 10px 10px;
 }
-.navbar .active {
+.navbar ul li a.active {
     background-color: #7d7878;
 }
 body {
