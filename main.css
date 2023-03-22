@@ -29,6 +29,10 @@ html {
 .navbar ul li a.active {
     background-color: #7d7878;
 }
+#hp {
+    float: right;
+    margin: 0 0 0 15px;
+}
 body {
     font-family: Verdana, Helvetica, Arial, sans-serif;
     width: 760px;
