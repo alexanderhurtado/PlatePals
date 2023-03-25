@@ -6,7 +6,7 @@ if (isset($_SESSION["username"])) {
 	$user = '';
 }
 
-if (empty($restaurant)) {
+if (empty($restaurants)) {
 	include '../errors/matches_error.php';
 }
 
