@@ -15,7 +15,7 @@ if (!isset($_SESSION["username"])) {
 				</p>
 			</div>
 			<div id="right_column">
-				<p><b>Category:</b> <?php echo $restaurant->getCategory(); ?></p>
+				<p><b>Categories:</b> <?php echo $restaurant->getCategory(); ?></p>
 				<p><b>Rating:</b> <?php echo $restaurant->getStarRating(); ?></p>
 				<p><b>Price: <?php
 					$price = $restaurant->getPriceTier();
@@ -24,7 +24,7 @@ if (!isset($_SESSION["username"])) {
 					}?></b></p>
 					
 				<!--Need to clean up link to shorten urls-->	
-				<p><b>Website:</b> <?php echo "<a href=" . $restaurant->getSiteURL() . ">"
+				<p><b>Website:</b> <?php echo "<a href=//www." . $restaurant->getSiteURL() . ">"
 					. $restaurant->getSiteURL() . "</a>"; ?></p>
 					
 				<!--Need to make buttons more interesting-->	
