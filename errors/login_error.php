@@ -1,5 +1,4 @@
 <main>
-    <h1>Error</h1>
     <h3>You must be signed in to access this page.</h3>
 	<div class='form'>
 		Click here to <a href='/PlatePals/user/login.php'>sign in</a><br>
