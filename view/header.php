@@ -15,9 +15,9 @@ if (session_status() === PHP_SESSION_NONE) {
 <nav class="navbar">
 	<ul>
 		<li><a id="text/css" href="/PlatePals/restaurant">Start</a></li>
-		<li><a id="text/css" href="/PlatePals/matches">Your Matches</a></li>
+		<!-- <li><a id="text/css" href="/PlatePals/matches">Your Matches</a></li> -->
 		<li><a id="text/css" href="/PlatePals/about">About</a></li>
-		<li><a id="text/css" href="/PlatePals/dashboard">Dashboard</a></li>
+		<!-- <li><a id="text/css" href="/PlatePals/dashboard">Dashboard</a></li> -->
 		<li class="float"> <?php
 			if (!isset($_SESSION["username"])) { ?>
 				<a href="/PlatePals/user/login">Sign In</a>

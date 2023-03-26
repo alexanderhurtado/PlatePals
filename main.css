@@ -34,6 +34,12 @@ html {
     float: right;
     margin: 0 0 0 15px;
 }
+#hp1 {
+    float: left;
+    margin: 0 0 0 15px;
+	padding-left: 1em;
+	padding-right: 1em;
+}
 body {
     font-family: Verdana, Helvetica, Arial, sans-serif;
     width: 760px;
@@ -98,6 +104,7 @@ footer p {
 .card-text{
 	text-align: justified;
 	margin-bottom: 15px;
+	color: rgb(0, 0, 0);
 }
 .card-btn{
 	border: none;
