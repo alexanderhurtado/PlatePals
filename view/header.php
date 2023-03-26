@@ -14,9 +14,10 @@ if (session_status() === PHP_SESSION_NONE) {
 <body>
 <nav class="navbar">
 	<ul>
-		<li><a href="/PlatePals/restaurant">Start</a></li>
-		<li><a href="/PlatePals/matches">Your Matches</a></li>
-		<li><a href="/PlatePals/about">About</a></li>
+		<li><a id="text/css" href="/PlatePals/restaurant">Start</a></li>
+		<li><a id="text/css" href="/PlatePals/matches">Your Matches</a></li>
+		<li><a id="text/css" href="/PlatePals/about">About</a></li>
+		<li><a id="text/css" href="/PlatePals/dashboard">Dashboard</a></li>
 		<li class="float"> <?php
 			if (!isset($_SESSION["username"])) { ?>
 				<a href="/PlatePals/user/login">Sign In</a>
@@ -28,3 +29,9 @@ if (session_status() === PHP_SESSION_NONE) {
 		</li>
 	</ul>
 </nav>
+
+<?php 
+	  /*if($this->uri->segment(2)=="restaurant"){echo 'active';}
+	    if($this->uri->segment(2)=="Your Matches"){echo 'active';}
+		if($this->uri->segment(2)=="About"){echo 'active';}*/
+?>

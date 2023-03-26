@@ -12,11 +12,5 @@
 		$user = $_SESSION["username"];
 		$restaurants = $userDB->getFavorites($user);
 	}
-	
-  /*if($restaurant = 0){
-    $error_message= $e->getMessage();
-    include('../errors/matches_error.php');
-    exit();
-  }*/
 	include('matches_view.php');
 ?>
