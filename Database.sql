@@ -79,7 +79,7 @@ INSERT INTO restaurants VALUES
 (42, 'Urban Chislic', 3.5, 'American', 2, 'https://s3-media0.fl.yelpcdn.com/bphoto/hmo1A25W_zO16FgPDC3q5A/348s.jpg', 'urbanchislic.com'),
 (43, 'Boss'' Pizza & Chicken', 2.5, 'Pizza, Chicken Shop', 2, 'https://s3-media0.fl.yelpcdn.com/bphoto/zNXfgliLkDZ64l3QiEmzTw/348s.jpg', 'bosspizzaandchicken.com'),
 (44, 'Buffalo Wild Wings', 2.5, 'American, Sports Bar, Chicken Wing', 2, 'https://s3-media0.fl.yelpcdn.com/bphoto/VU5ThlJvexjusgMsPhrOcQ/348s.jpg', 'buffalowildwings.com'),
-(45, 'Rod Robin Gourmet Burgers & Brews', 2.5, 'Burger, American', 2, 'https://s3-media0.fl.yelpcdn.com/bphoto/6-BBPjuM0YqyNxy9qXXVPA/348s.jpg', 'redrobin.com'),
+(45, 'Red Robin Gourmet Burgers & Brews', 2.5, 'Burger, American', 2, 'https://s3-media0.fl.yelpcdn.com/bphoto/6-BBPjuM0YqyNxy9qXXVPA/348s.jpg', 'redrobin.com'),
 (46, 'Cracker Barrel Old Country Store', 3.5, 'American, Breakfast & Brunch, Southern', 1, 'https://s3-media0.fl.yelpcdn.com/bphoto/ClS9BhQ2ig-v7npeai7IsQ/348s.jpg', 'crackerbarrel.com'),
 (47, 'Crooked Pint Ale House', 3, 'Bar, American, Taco', 2, 'https://s3-media0.fl.yelpcdn.com/bphoto/somBoTgq1qFhbUNEsVr60A/348s.jpg', 'crookedpint.com'),
 (48, 'Tinner''s Public House', 3.5, 'American, Sports Bar, Breakfast & Brunch', 2, 'https://s3-media0.fl.yelpcdn.com/bphoto/S3TQ3mbR6ZxMV2W-a8KaOQ/348s.jpg', 'tinnerspublichouse.com'),

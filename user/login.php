@@ -14,6 +14,10 @@ if (isset($_POST['username'])){
 	$rows = $userDB->getUser($username, $password);
 	if($rows==1){
 		$_SESSION['username'] = $username;
+		
+		$partner = $userDB->getPartner($username);
+		$_SESSION['partner'] = $partner;
+		
 		header("Location: ../index.php");
 	}else{ ?>
 		<div class="form">

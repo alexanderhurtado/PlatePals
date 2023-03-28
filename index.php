@@ -3,7 +3,7 @@
 	<div>
 	<?php
 		if (isset($_SESSION["username"])) { 
-			header("Location: dashboard.php"); 
+			header("Location: dashboard"); 
 		} else { 
 			header("Location: user/login.php");
 		}

@@ -16,6 +16,44 @@ class UserDB {
 	
 	//Need a function to remove favorites from the favorite list
 	
+	//Function for setting partner
+	public function setPartner($un, $partner) {
+        $db = Database::getDB();
+        $query = 'UPDATE users
+		          SET partner = :partner_name
+				  WHERE username = :user_name';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':partner_name', $partner);
+        $statement->bindValue(':user_name', $un);
+        $statement->execute();
+        $statement->closeCursor();
+    }
+	
+	//Function for resetting partner
+	public function resetPartner($un) {
+        $db = Database::getDB();
+        $query = 'UPDATE users
+		          SET partner = null
+				  WHERE username = :user_name';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':user_name', $un);
+        $statement->execute();
+        $statement->closeCursor();
+    }
+	
+	//Function for getting partner name
+	public function getPartner($un) {
+        $db = Database::getDB();
+        $query = 'SELECT partner
+				  FROM users
+				  WHERE username = :user_name';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':user_name', $un);
+        $statement->execute();
+		
+		$partner = $statement->fetchColumn();
+        return $partner;
+    }
 	
 	//Function for calling only favorite restaurants from the database
     public function getFavorites($un) {
@@ -23,6 +61,33 @@ class UserDB {
         $query = 'SELECT * FROM restaurants r JOIN user_' . $un . ' a
 				  ON r.restaurantID = a.restaurantID
 				  WHERE isFavorite = 1
+                  ORDER BY r.name';
+        $statement = $db->prepare($query);
+        $statement->execute();
+        
+        $restaurants = array();
+        foreach ($statement as $row) {
+            $restaurant = new Restaurant();
+			$restaurant->setID($row['restaurantID']);
+            $restaurant->setName($row['name']);
+			$restaurant->setRating($row['rating']);
+            $restaurant->setCategory($row['category']);
+			$restaurant->setPriceTier($row['price_tier']);
+			$restaurant->setSiteURL($row['site_url']);
+            $restaurant->setPhotoURL($row['photo_url']);
+            $restaurants[] = $restaurant;
+        }
+        return $restaurants;
+    }
+	
+	//Function for calling matches between two databases
+    public function getMatches($un, $partner) {
+        $db = Database::getDB();
+        $query = 'SELECT * FROM restaurants r JOIN user_' . $un . ' a
+				  ON r.restaurantID = a.restaurantID
+				  JOIN user_' . $partner . ' b
+				  ON r.restaurantID = b.restaurantID
+				  WHERE a.isFavorite = 1 AND b.isFavorite = 1
                   ORDER BY r.name';
         $statement = $db->prepare($query);
         $statement->execute();

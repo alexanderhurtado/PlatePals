@@ -10,7 +10,9 @@
 	session_start();
 	if (isset($_SESSION["username"])) {
 		$user = $_SESSION["username"];
+		$partner = $_SESSION["partner"];
 		$restaurants = $userDB->getFavorites($user);
+		$matches = $userDB->getMatches($user, $partner);
 	}
 	include('dashboard_view.php');
 ?>
