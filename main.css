@@ -33,12 +33,7 @@ html {
 #hp {
     float: right;
     margin: 0 0 0 15px;
-}
-#hp1 {
-    float: left;
-    margin: 0 0 0 15px;
-	padding-left: 1em;
-	padding-right: 1em;
+	border: 5px solid #555;
 }
 body {
     font-family: Verdana, Helvetica, Arial, sans-serif;
