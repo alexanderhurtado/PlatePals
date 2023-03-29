@@ -23,7 +23,7 @@ if (session_status() === PHP_SESSION_NONE) {
 				<a href="/PlatePals/user/login">Sign In</a>
 			<?php } else { ?>
 				<a href="/PlatePals/dashboard">
-					<?php echo $_SESSION["username"] ?>
+					Dashboard:  <?php echo $_SESSION["username"] ?>
 				</a>
 			<?php } ?>
 		</li>
