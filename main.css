@@ -15,10 +15,6 @@ html {
 .navbar ul li.float {
     float: right;
 }
-/*nav ul:active {
-    background-color: #a81d1d;
-    color: #d22525;
-}*/
 .navbar ul li a {
     display: inline-block;
     color: white;
@@ -28,6 +24,10 @@ html {
 }
 .navbar ul li a:hover {
     background-color: #0f1620;
+	border-radius: 0px 0px 10px 10px;
+}
+.navbar ul li a.active{
+	background-color: #0f1620;
 	border-radius: 0px 0px 10px 10px;
 }  
 #hp {

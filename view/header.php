@@ -14,24 +14,33 @@ if (session_status() === PHP_SESSION_NONE) {
 <body>
 <nav class="navbar">
 	<ul>
-		<li><a id="text/css" href="/PlatePals/restaurant">Start</a></li>
+		<li><a id="text/css" href="http://localhost:8000/PlatePals/restaurant/">Restaurants</a></li>
 		<!-- <li><a id="text/css" href="/PlatePals/matches">Your Matches</a></li> -->
-		<li><a id="text/css" href="/PlatePals/about">About</a></li>
+		<li><a id="text/css" href="http://localhost:8000/PlatePals/about">About</a></li>
 		<!-- <li><a id="text/css" href="/PlatePals/dashboard">Dashboard</a></li> -->
 		<li class="float"> <?php
 			if (!isset($_SESSION["username"])) { ?>
-				<a href="/PlatePals/user/login">Sign In</a>
+				<a href="http://localhost:8000/PlatePals/user/login">Sign In</a>
 			<?php } else { ?>
-				<a href="/PlatePals/dashboard">
+				<a href="http://localhost:8000/PlatePals/dashboard/">
 					Dashboard:  <?php echo $_SESSION["username"] ?>
 				</a>
 			<?php } ?>
+			<script>
+			// Get the current URL
+			var currentUrl = window.location.href;
+
+			// Loop through each link in the navigation menu
+			var links = document.querySelectorAll('.navbar ul li a');
+			for (var i = 0; i < links.length; i++) {
+				var link = links[i];
+
+				// If the link's href attribute matches the current URL, add the "active" class
+				if (link.href === currentUrl) {
+				link.classList.add('active');
+				}
+			}
+			</script>
 		</li>
 	</ul>
 </nav>
-
-<?php 
-	  /*if($this->uri->segment(2)=="restaurant"){echo 'active';}
-	    if($this->uri->segment(2)=="Your Matches"){echo 'active';}
-		if($this->uri->segment(2)=="About"){echo 'active';}*/
-?>
