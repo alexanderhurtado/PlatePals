@@ -71,7 +71,9 @@ class UserDB {
 			$restaurant->setID($row['restaurantID']);
             $restaurant->setName($row['name']);
 			$restaurant->setRating($row['rating']);
-            $restaurant->setCategory($row['category']);
+            $restaurant->setCategory1($row['cat1']);
+            $restaurant->setCategory2($row['cat2']);
+            $restaurant->setCategory3($row['cat3']);
 			$restaurant->setPriceTier($row['price_tier']);
 			$restaurant->setSiteURL($row['site_url']);
             $restaurant->setPhotoURL($row['photo_url']);
@@ -98,7 +100,9 @@ class UserDB {
 			$restaurant->setID($row['restaurantID']);
             $restaurant->setName($row['name']);
 			$restaurant->setRating($row['rating']);
-            $restaurant->setCategory($row['category']);
+            $restaurant->setCategory1($row['cat1']);
+            $restaurant->setCategory2($row['cat2']);
+            $restaurant->setCategory3($row['cat3']);
 			$restaurant->setPriceTier($row['price_tier']);
 			$restaurant->setSiteURL($row['site_url']);
             $restaurant->setPhotoURL($row['photo_url']);
@@ -108,11 +112,9 @@ class UserDB {
     }
 	
 	//Function for calling only active restaurants from the database
-    public function getActive($un) {
+    public function getActive($q) {
         $db = Database::getDB();
-        $query = 'SELECT * FROM restaurants r JOIN user_' . $un . ' a
-				  ON r.restaurantID = a.restaurantID
-				  WHERE isActive = 1';
+        $query = $q;
         $statement = $db->prepare($query);
         $statement->execute();
         
@@ -122,7 +124,9 @@ class UserDB {
 			$restaurant->setID($row['restaurantID']);
             $restaurant->setName($row['name']);
 			$restaurant->setRating($row['rating']);
-            $restaurant->setCategory($row['category']);
+            $restaurant->setCategory1($row['cat1']);
+            $restaurant->setCategory2($row['cat2']);
+            $restaurant->setCategory3($row['cat3']);
 			$restaurant->setPriceTier($row['price_tier']);
 			$restaurant->setSiteURL($row['site_url']);
             $restaurant->setPhotoURL($row['photo_url']);

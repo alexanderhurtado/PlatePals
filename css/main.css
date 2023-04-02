@@ -1,0 +1,117 @@
+html {
+    background-color: rgb(52, 75, 108);
+}
+.navibar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2a3c56;
+	border-radius: 0px 0px 10px 10px;
+}
+.navibar ul li {
+    float: left;
+}
+.navibar ul li.float {
+    float: right;
+}
+.navibar ul li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navibar ul li a:hover {
+    background-color: #0f1620;
+	border-radius: 0px 0px 10px 10px;
+}
+.navibar ul li a.active{
+	background-color: #0f1620;
+	border-radius: 0px 0px 10px 10px;
+}  
+#hp {
+    float: right;
+    margin: 0 0 0 15px;
+	border: 5px solid #555;
+}
+body {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 2em;
+    background-color: #e3eaee;
+    border: 1px solid black;
+	border-radius: 0px 0px 15px 15px;
+}
+#left_column {
+    float: left;
+    width: 250px;
+    text-align: center;
+}
+#right_column {
+    float: left;
+    padding-left: 1em;
+    padding-bottom: 2em;
+}
+footer {
+    clear: both;
+    border-top: 2px solid black;
+}
+footer p {
+    text-align: right;
+    font-size: 80%;
+}
+.card-wrap{
+	margin: auto;
+	width: 90%;
+	background: #6bacc5;
+	border-radius: 20px;
+	overflow: hidden;
+	color: var(--color-text);
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+			  rgba(0, 0, 0, 0.23) 0px 6px 6px;
+	transition: all .2s ease-in-out;
+	margin-top: 20px;
+}
+.card-header{
+	height: 348px;
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+.card-header img{
+	border-radius: 20px;
+	margin-top: 15px;
+    border: 1px solid black;
+}
+.card-content{
+	align-items: center;
+	width: 80%;
+	margin: 0 auto;
+}
+.card-title{
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+.card-text{
+	text-align: justified;
+	margin-bottom: 15px;
+	color: rgb(0, 0, 0);
+}
+.card-btn{
+	border: none;
+	width: 30%;
+	height: 50px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5px 30px;
+	margin-left: 65px;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+.card-btn:hover {
+	transform: scale(1.12);
+}
