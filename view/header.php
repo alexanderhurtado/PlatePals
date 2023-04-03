@@ -7,12 +7,20 @@ if (session_status() === PHP_SESSION_NONE) {
 <html>
 <head>
     <title>PlatePals Restaurant Finder</title>
-    <link rel="stylesheet" type="text/css" href="/PlatePals/main.css">
+	
+	<script src="/PlatePals/js/jquery-1.10.2.min.js"></script>
+    <script src="/PlatePals/js/jquery-ui.js"></script>
+    <script src="/PlatePals/js/bootstrap.min.js"></script>
+	<script src="/PlatePals/restaurant/filter.php"></script>
+	
+    <link rel="stylesheet" href="/PlatePals/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/PlatePals/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/PlatePals/css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-<nav class="navbar">
+<nav class="navibar">
 	<ul>
 		<li><a id="text/css" href="http://localhost:8000/PlatePals/restaurant/">Restaurants</a></li>
 		<!-- <li><a id="text/css" href="/PlatePals/matches">Your Matches</a></li> -->

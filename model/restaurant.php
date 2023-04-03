@@ -1,11 +1,13 @@
 <?php
 class Restaurant {
-    private $id, $name, $rating, $category, $priceTier, $photoURL, $siteURL;
+    private $id, $name, $rating, $category1, $category2, $category3, $priceTier, $photoURL, $siteURL;
 
     public function __construct() {
         $this->name = "";
         $this->rating = 0.0;
-        $this->category = "";
+        $this->category1 = "";
+        $this->category2 = "";
+        $this->category3 = "";
         $this->priceTier = 0;
         $this->photoURL = "";
         $this->siteURL = "";
@@ -32,12 +34,37 @@ class Restaurant {
         $this->rating = $value;
     }
 
-    public function getCategory() {
-        return $this->category;
+    public function getCategory1() {
+        return $this->category1;
     }
-    public function setCategory($value) {
-        $this->category = $value;
+    public function setCategory1($value) {
+        $this->category1 = $value;
     }
+
+    public function getCategory2() {
+        return $this->category2;
+    }
+    public function setCategory2($value) {
+        $this->category2 = $value;
+    }
+
+    public function getCategory3() {
+        return $this->category3;
+    }
+    public function setCategory3($value) {
+        $this->category3 = $value;
+    }
+	
+	public function getCategories() {
+		$categories = $this->getCategory1();
+		if(isset($this->category2)) {
+			$categories .= ', ' . $this->getCategory2();
+			if(isset($this->category3)) {
+				$categories .= ', ' . $this->getCategory3();
+			}
+		}
+        return $categories;
+	}
 
     public function getPriceTier() {
         return $this->priceTier;

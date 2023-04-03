@@ -1,7 +1,7 @@
 html {
     background-color: rgb(52, 75, 108);
 }
-.navbar ul {
+.navibar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -9,24 +9,24 @@ html {
     background-color: #2a3c56;
 	border-radius: 0px 0px 10px 10px;
 }
-.navbar ul li {
+.navibar ul li {
     float: left;
 }
-.navbar ul li.float {
+.navibar ul li.float {
     float: right;
 }
-.navbar ul li a {
+.navibar ul li a {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-.navbar ul li a:hover {
+.navibar ul li a:hover {
     background-color: #0f1620;
 	border-radius: 0px 0px 10px 10px;
 }
-.navbar ul li a.active{
+.navibar ul li a.active{
 	background-color: #0f1620;
 	border-radius: 0px 0px 10px 10px;
 }  
@@ -37,7 +37,7 @@ html {
 }
 body {
     font-family: Verdana, Helvetica, Arial, sans-serif;
-    width: 760px;
+    width: 960px;
     margin: 0 auto;
     padding: 0 2em;
     background-color: #e3eaee;
@@ -64,7 +64,7 @@ footer p {
 }
 .card-wrap{
 	margin: auto;
-	width: 80%;
+	width: 90%;
 	background: #6bacc5;
 	border-radius: 20px;
 	overflow: hidden;
