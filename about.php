@@ -2,8 +2,8 @@
 	<div class="About">
 		<h1>Welcome to PlatePals</h1>
 		<h3>Our Journey</h3>
-		<img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcT-lAkYoetp8U_JsyaMpTucKn9NuXRN9Jz7iX-g63CZJSp0jSgIXQEAnMQO-qTrvBLkCA-WUZpl8fuoFT4" 
-			height= 200px width=200px id="hp"/>
+		<img src="../PlatePals/About_Photo.jpg" 
+			height= 250px width=300px id="hp"/>
 		<p>Set the scene, your at home and your significant other comes to you and says "where do you want to eat at tonight?".
 			What do you do? this was the problem everytime when my significant other and I would try to decide on a
 			place to dine at. what about this, what about that, it went on and on. in 2023, I was introduced to Nick who had this
