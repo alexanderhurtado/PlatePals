@@ -26,7 +26,7 @@ if (isset($_SESSION["username"])) {
 			$_SESSION["partner"] = $partner;
 			header("Refresh:0");
 		}
-	} ?>
+	}?>
 	<main>
         <section>
             <h1>Welcome to PlatePals, <?php echo $_SESSION["username"]?>!</h1>
@@ -67,13 +67,20 @@ if (isset($_SESSION["username"])) {
 			} ?>
 			<ul class="column-list-3">
 				<?php foreach ($restaurants as $restaurant) : ?>
-					<li class="restaurant-item">
-						<span class="arrow" onclick="showRestaurantInfo(this)">&#10148</span>
-						<!-- Add links or something to make the page more interesting? -->
+					<li>
 						<?php echo $restaurant->getName(); ?>
-						<?php echo "<a href=//www." . $restaurant->getSiteURL()
-								 . " target=\"_blank\" >" . $restaurant->getSiteURL() . 
-								   "</a>"; ?>
+						<div class="additional-info">
+							<br><p><b>Categories:</b> <?php echo $restaurant->getCategories(); ?></p>
+							<p><b>Rating:</b> <?php echo $restaurant->getStarRating(); ?></p>
+							<p><b>Price: <?php $price = $restaurant->getPriceTier();
+								for ($x=$price; $x>0; $x--) {
+									echo "$";
+								}?></b></p>
+							<p><b>Link: </b><?php echo "<a href=//www." . $restaurant->getSiteURL(). 
+									   " target=\"_blank\" >" . $restaurant->getSiteURL() . 
+									   "</a>"; ?></p>
+						</div>
+						<button class="arrow-button" onclick="toggleInfo(this)">+</button>						<!-- Add links or something to make the page more interesting? -->
 					</li>
 				<?php endforeach; ?>
 			</ul>
@@ -89,25 +96,14 @@ if (isset($_SESSION["username"])) {
 include '../view/footer.php'; ?>
 
 <script>
-  const restaurantItems = document.querySelectorAll('.restaurant-item');
-  const restaurantInfo = document.querySelector('#restaurant-info');
-  let currentRestaurantIndex = 0;
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowUp') {
-      currentRestaurantIndex = (currentRestaurantIndex - 1 + restaurantItems.length) % restaurantItems.length;
-      displayRestaurantInfo();
-    } else if (event.key === 'ArrowDown') {
-      currentRestaurantIndex = (currentRestaurantIndex + 1) % restaurantItems.length;
-      displayRestaurantInfo();
-    }
-  });
-
-  function displayRestaurantInfo() {
-    const currentRestaurant = restaurantItems[currentRestaurantIndex];
-    const restaurantName = currentRestaurant.textContent;
-    // Here you can replace this console.log with the code to display the information of the restaurant, such as an AJAX call to fetch the data from the server.
-    console.log(`Displaying information for restaurant: ${restaurantName}`);
-    restaurantInfo.textContent = `Information for restaurant "${restaurantName}" will be displayed here.`;
-  }
+	function toggleInfo(button) {
+		var info = button.previousElementSibling;
+		if (info.style.display === "none") {
+			info.style.display = "block";
+			button.innerHTML = "-";
+		}else {
+			info.style.display = "none";
+			button.innerHTML = "+";
+		}
+	}
 </script>
