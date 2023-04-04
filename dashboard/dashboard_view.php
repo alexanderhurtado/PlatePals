@@ -67,7 +67,8 @@ if (isset($_SESSION["username"])) {
 			} ?>
 			<ul class="column-list-3">
 				<?php foreach ($restaurants as $restaurant) : ?>
-					<li>
+					<li class="restaurant-item">
+						<span class="arrow" onclick="showRestaurantInfo(this)">&#10148</span>
 						<!-- Add links or something to make the page more interesting? -->
 						<?php echo $restaurant->getName(); ?>
 						<?php echo "<a href=//www." . $restaurant->getSiteURL()
@@ -86,3 +87,27 @@ if (isset($_SESSION["username"])) {
 <?php }
 
 include '../view/footer.php'; ?>
+
+<script>
+  const restaurantItems = document.querySelectorAll('.restaurant-item');
+  const restaurantInfo = document.querySelector('#restaurant-info');
+  let currentRestaurantIndex = 0;
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowUp') {
+      currentRestaurantIndex = (currentRestaurantIndex - 1 + restaurantItems.length) % restaurantItems.length;
+      displayRestaurantInfo();
+    } else if (event.key === 'ArrowDown') {
+      currentRestaurantIndex = (currentRestaurantIndex + 1) % restaurantItems.length;
+      displayRestaurantInfo();
+    }
+  });
+
+  function displayRestaurantInfo() {
+    const currentRestaurant = restaurantItems[currentRestaurantIndex];
+    const restaurantName = currentRestaurant.textContent;
+    // Here you can replace this console.log with the code to display the information of the restaurant, such as an AJAX call to fetch the data from the server.
+    console.log(`Displaying information for restaurant: ${restaurantName}`);
+    restaurantInfo.textContent = `Information for restaurant "${restaurantName}" will be displayed here.`;
+  }
+</script>

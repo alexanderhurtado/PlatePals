@@ -115,3 +115,42 @@ footer p {
 .card-btn:hover {
 	transform: scale(1.12);
 }
+
+/* arrow key styles */
+.arrow-keys {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+  }
+  
+  .arrow-keys:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 20px;
+	height: 20px;
+	border-top: 2px solid black;
+	border-right: 2px solid black;
+	transition: all 0.2s ease-in-out;
+  }
+  
+  .arrow-keys.up:before {
+	transform: translate(-50%, -50%) rotate(-135deg);
+  }
+  
+  .arrow-keys.down:before {
+	transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .arrow-keys.right:before {
+	transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  .arrow-keys.left:before {
+	transform: translate(-50%, -50%) rotate(135deg);
+  }
+  
