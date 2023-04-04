@@ -118,3 +118,14 @@ footer p {
 .additional-info {
 	display: none;
 }
+.arrow-button {
+	text-align: center;
+	font-weight: bold;
+	font-size: 7px;
+	color: #333;
+	border-radius: 5px;
+	border-color: black;
+	background-color: rgb(189, 187, 187);
+	height: 15px;
+	width: 20px;
+}

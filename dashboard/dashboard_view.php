@@ -27,6 +27,8 @@ if (isset($_SESSION["username"])) {
 			header("Refresh:0");
 		}
 	}?>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/font-awesome.min.css">
 	<main>
         <section>
             <h1>Welcome to PlatePals, <?php echo $_SESSION["username"]?>!</h1>
@@ -80,7 +82,7 @@ if (isset($_SESSION["username"])) {
 									   " target=\"_blank\" >" . $restaurant->getSiteURL() . 
 									   "</a>"; ?></p>
 						</div>
-						<button class="arrow-button" onclick="toggleInfo(this)">+</button>						<!-- Add links or something to make the page more interesting? -->
+						<button class="arrow-button" onclick="toggleInfo(this)">></button>						<!-- Add links or something to make the page more interesting? -->
 					</li>
 				<?php endforeach; ?>
 			</ul>
@@ -100,10 +102,10 @@ include '../view/footer.php'; ?>
 		var info = button.previousElementSibling;
 		if (info.style.display === "none") {
 			info.style.display = "block";
-			button.innerHTML = "-";
+			button.innerHTML = "^";
 		}else {
 			info.style.display = "none";
-			button.innerHTML = "+";
+			button.innerHTML = ">";
 		}
 	}
 </script>
