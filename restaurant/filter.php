@@ -44,9 +44,7 @@ if (!isset($_SESSION["username"])) {
 	</div>
 	<div class="col-md-9">
 		<main class="card-wrap">
-			<div class="row filter_data">
-
-			</div>
+			<div class="row filter_data"></div>
 			<button class="card-btn" onclick='reloadFunc(this.attributes["id"].value)' id="accept">YES</button>
 			<button class="card-btn" onclick="reloadFunc(this.id)" id="decline">NO</button>
 		</main>
