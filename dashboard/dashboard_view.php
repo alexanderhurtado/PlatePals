@@ -13,6 +13,11 @@ if (isset($_SESSION["username"])) {
 		$_SESSION["partner"] = null;
 		header("Refresh:0");
 	} 
+	if(isset($_POST['remove'])) {
+		$dropRest = $_POST['hidden_restaurant_id'];
+		$userDB->deleteFavorite($user, $dropRest);
+		header("Refresh:0");
+	}
 	if(isset($_POST['match'])) {
 		$username = stripslashes($_REQUEST['username']);
 		$check = $userDB->checkUser($username);
@@ -81,6 +86,12 @@ if (isset($_SESSION["username"])) {
 							<p><b>Link: </b><?php echo "<a href=//www." . $restaurant->getSiteURL(). 
 									   " target=\"_blank\" >" . $restaurant->getSiteURL() . 
 									   "</a>"; ?></p>
+							<form method="post">
+								<input type="hidden" name="hidden_restaurant_id" 
+									value="<?php echo $restaurant->getID(); ?>" />
+								<input type="submit" name="remove"
+										class="button" value="Remove from Favorites" />
+							</form>
 						</div>
 						<button class="arrow-button" onclick="toggleInfo(this)">></button>						<!-- Add links or something to make the page more interesting? -->
 					</li>
@@ -88,7 +99,7 @@ if (isset($_SESSION["username"])) {
 			</ul>
 			<form method="post">
 				<input type="submit" name="reset"
-						class="button" value="Reset Favorites" />
+						class="button" value="Reset All Favorites" />
 			</form><br>
         </section>
 		<a href="../user/logout.php">Logout</a>

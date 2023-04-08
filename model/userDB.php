@@ -14,7 +14,17 @@ class UserDB {
     }
 	
 	
-	//Need a function to remove favorites from the favorite list
+	//Function to remove favorite from the favorite list
+	public function deleteFavorite($un, $restaurantID) {
+        $db = Database::getDB();
+        $query = 'UPDATE user_' . $un . '
+		          SET isFavorite = 0, isActive = 1
+				  WHERE restaurantID = :restaurant_id';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':restaurant_id', $restaurantID);
+        $statement->execute();
+        $statement->closeCursor();
+    }
 	
 	//Function for setting partner
 	public function setPartner($un, $partner) {
