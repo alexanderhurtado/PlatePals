@@ -42,7 +42,8 @@ if (isset($_SESSION["username"])) {
 				page to the favorites listings.</p>
 			<?php if($_SESSION["partner"] == null) { ?>
 			<h2>You are not connected to any other users</h2> 
-			<p> Please feel	free to connect with another user by typing their username into the username box below.</p>
+			<p>Please feel free to connect with another user by typing 
+				their username into the username box below.</p>
 			
 			<form  action="" method="post" name="match">
 				<input type="text" name="username" placeholder="Partner's Username"></input>
@@ -56,7 +57,6 @@ if (isset($_SESSION["username"])) {
 				<ul class="column-list-3">
 					<?php foreach ($matches as $match) : ?>
 						<li>
-							<!-- Add links or something to make the page more interesting? -->
 							<?php echo $match->getName(); ?>	
 						</li>
 					<?php endforeach; ?>
