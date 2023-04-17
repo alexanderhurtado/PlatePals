@@ -45,8 +45,10 @@
 	
 	$restaurantList = $userDB->getActive($query);
 	$restaurant = reset($restaurantList);
-	
-	?>
+		
+	if (empty($restaurant)) {
+		include('../errors/restaurant_error.php');
+	} else { ?>
 		<div class="card-header">
 			<img src="<?php echo $restaurant->getPhotoURL(); ?>"
 						alt="<?php echo $restaurant->getImageAltText(); ?>">
@@ -65,3 +67,5 @@
 				<input type="hidden" id="hidden_restaurant_id" value="<?php echo $restaurant->getID(); ?>" />
 			</div>
 		</div>
+	<?php }
+?>
