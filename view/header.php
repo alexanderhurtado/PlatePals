@@ -39,7 +39,7 @@ if (session_status() === PHP_SESSION_NONE) {
 			var currentUrl = window.location.href;
 
 			// Loop through each link in the navigation menu
-			var links = document.querySelectorAll('.navbar ul li a');
+			var links = document.querySelectorAll('.navibar ul li a');
 			for (var i = 0; i < links.length; i++) {
 				var link = links[i];
 
