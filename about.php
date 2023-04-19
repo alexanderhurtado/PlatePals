@@ -6,9 +6,7 @@
 			height= 250px width=300px id="hp"/>
 		<p>PlatePals is a user-friendly website that provides personalized restaurant recommendations
 			 based on your preferences. Our algorithm takes into account your location, budget, and cuisine 
-			 preferences to suggest restaurants that match your criteria. We've partnered with some of 
-			 the best local restaurants to offer you exclusive discounts and promotions, making your 
-			 date night even more special.</p>
+			 preferences to suggest restaurants that match your criteria.</p>
 		<p>With PlatePals, you can say goodbye to the hassle of scrolling through endless restaurant 
 			reviews and debating where to go. Our platform saves you time and eliminates the stress of 
 			decision-making. All you have to do is answer a few questions about your dining preferences,
