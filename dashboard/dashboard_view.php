@@ -90,7 +90,7 @@ if (isset($_SESSION["username"])) {
 								<input type="hidden" name="hidden_restaurant_id" 
 									value="<?php echo $restaurant->getID(); ?>" />
 								<input type="submit" name="remove"
-										class="button" value="Remove from Favorites" />
+								class="btn btn-primary" value="Remove from Favorites" />
 							</form>
 						</div>
 						<button class="arrow-button" onclick="toggleInfo(this)">></button>						<!-- Add links or something to make the page more interesting? -->
@@ -99,10 +99,10 @@ if (isset($_SESSION["username"])) {
 			</ul>
 			<form method="post">
 				<input type="submit" name="reset"
-						class="button" value="Reset All Favorites" />
+				class="btn btn-primary" value="Reset All Favorites" />
 			</form><br>
         </section>
-		<button name="logout" onclick="location.href='../user/logout.php'">Logout</button>
+		<button class="btn btn-primary" onclick="location.href='../user/logout.php'">Logout</button>
 	</main>
 <?php }
 
