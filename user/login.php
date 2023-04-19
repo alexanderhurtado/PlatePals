@@ -40,6 +40,13 @@ if (isset($_POST['username'])){
 			<input name="submit" type="submit" value="Login" />
 		</form>
 		<p>Not registered yet? <a href='registration.php'>Register Here</a></p>
+		<br></br>
+		<p>Welcome to PlatePals, the ultimate solution for couples who want to enjoy a romantic
+		   dinner without the stress of choosing a restaurant!  Have you ever found yourself in 
+		   the endless debate of where to eat with your significant other? We understand how 
+		   frustrating it can be to make a decision that both of you will enjoy. That's why we 
+		   created PlatePals, a website dedicated to helping couples find the perfect dining spot
+		   for their next date night.</p>
 	</div>
 <?php }
 include '../view/footer.php'; ?>
