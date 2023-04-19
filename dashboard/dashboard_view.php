@@ -102,7 +102,7 @@ if (isset($_SESSION["username"])) {
 						class="button" value="Reset All Favorites" />
 			</form><br>
         </section>
-		<button onclick="location.href='../user/logout.php'">Logout</button>
+		<button name="logout" onclick="location.href='../user/logout.php'">Logout</button>
 	</main>
 <?php }
 
