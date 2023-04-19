@@ -135,9 +135,9 @@ form > input{
 }
 
 button[name="logout"] {
- 	padding: 10px 20px;
-	border-radius: 10px;
-	font-size: 20px;
+ 	padding: 10px 15px;
+	border-radius: 5px;
+	font-size: 15px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 500;
 	line-height: 1.1;
