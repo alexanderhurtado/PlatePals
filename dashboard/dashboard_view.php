@@ -40,6 +40,7 @@ if (isset($_SESSION["username"])) {
 			<p> We hope your experience with us is nothing short of perfection.</p>
 			<p>	If you would like to view your favorite restaurants, please scroll down to the bottom of the
 				page to the favorites listings.</p>
+			<br><hr/>
 			<?php if($_SESSION["partner"] == null) { ?>
 			<h2>You are not connected to any other users</h2> 
 			<p>Please feel free to connect with another user by typing 
@@ -67,6 +68,7 @@ if (isset($_SESSION["username"])) {
 				</form><br>
 			</section>
 		<?php } ?>
+		<br><hr/>
         <section>
             <h2>Your Favorites</h2>
 			<?php if (empty($restaurants)) {
@@ -77,7 +79,7 @@ if (isset($_SESSION["username"])) {
 					<li>
 						<?php echo $restaurant->getName(); ?>
 						<div class="additional-info">
-							<br><p><b>Categories:</b> <?php echo $restaurant->getCategories(); ?></p>
+							<p><b>Categories:</b> <?php echo $restaurant->getCategories(); ?></p>
 							<p><b>Rating:</b> <?php echo $restaurant->getStarRating(); ?></p>
 							<p><b>Price: <?php $price = $restaurant->getPriceTier();
 								for ($x=$price; $x>0; $x--) {
@@ -89,8 +91,7 @@ if (isset($_SESSION["username"])) {
 							<form method="post">
 								<input type="hidden" name="hidden_restaurant_id" 
 									value="<?php echo $restaurant->getID(); ?>" />
-								<input type="submit" name="remove"
-								class="btn btn-primary" value="Remove from Favorites" />
+								<input type="submit" name="remove" value="Remove from Favorites" />
 							</form>
 						</div>
 						<button class="arrow-button" onclick="toggleInfo(this)">></button>						<!-- Add links or something to make the page more interesting? -->

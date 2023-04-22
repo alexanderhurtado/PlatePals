@@ -94,11 +94,15 @@ footer p {
 	text-align: center;
 	margin-top: 25px;
 	margin-bottom: 20px;
+	color: #282828;
 }
 .card-text{
 	text-align: justified;
 	margin-bottom: 15px;
 	color: rgb(0, 0, 0);
+}
+.card-text a {
+  color: black;
 }
 .card-btn{
 	border: none;
@@ -117,6 +121,9 @@ footer p {
 }
 .additional-info {
 	display: none;
+	border-style: groove;
+	border-radius: 10px;
+	width: 30%;
 }
 .arrow-button {
 	text-align: center;
@@ -143,4 +150,7 @@ button[name="logout"] {
 	line-height: 1.1;
 	background-color: #5cb5e8;
 	color: white;
+}
+hr {
+  border-top: 1px solid DimGray;
 }
